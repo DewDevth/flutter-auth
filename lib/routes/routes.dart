@@ -1,3 +1,4 @@
+import 'package:frontend/pages/type_detail.dart';
 import 'package:frontend/screens/pages/login_page.dart';
 import 'package:frontend/screens/pages/register_page.dart';
 import 'package:get/get.dart';
@@ -15,7 +16,7 @@ class AppPage {
     ),
     GetPage(
       name: home,
-      page: () => const Home(),
+      page: () => Home(),
     ),
     GetPage(
       name: note,
@@ -28,6 +29,13 @@ class AppPage {
     GetPage(
       name: setting,
       page: () => const Setting(),
+    ),
+    GetPage(
+      name: typeDetail,
+      page: () => TypeDetailPage(
+        typeId: "",
+        typeTitle: "",
+      ),
     ),
 
     //auth
@@ -45,15 +53,20 @@ class AppPage {
   static gethome() => home;
   static getnote() => note;
   static getsetting() => setting;
+  static gettypedetail() => typeDetail;
+  //auth
   static getlogin() => login;
   static getregister() => register;
 
-//
+//user
   static String navbar = '/navbar';
   static String home = '/home';
   static String note = '/note';
   static String chart = '/chart';
   static String setting = '/setting';
+  static String typeDetail = '/type-detail';
+
+  //auth
   static String login = '/';
   static String register = '/register';
 }

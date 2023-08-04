@@ -68,13 +68,12 @@ import 'package:flutter/material.dart';
 import 'package:frontend/routes/routes.dart';
 import 'package:get/get.dart';
 
-import 'middleware/authMiddleware.dart';
-
 void main() {
   runApp(GetMaterialApp(
     themeMode: ThemeMode.dark,
     debugShowCheckedModeBanner: false,
-    initialRoute: "/",
+    // initialRoute: "/",
+    initialRoute: "/navbar",
     defaultTransition: Transition.fade,
     getPages: AppPage.routes,
   ));

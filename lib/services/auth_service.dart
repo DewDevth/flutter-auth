@@ -53,3 +53,19 @@ class AuthService {
     await prefs.setString('user', jsonEncode(user));
   }
 }
+
+class ApiService {
+  static Future<List?> getCarTypeList() async {
+    const url = 'http://localhost:4001/api/v1/car-type';
+    final uri = Uri.parse(url);
+    final response = await http.get(
+      uri,
+    );
+    if (response.statusCode == 200) {
+      final json = jsonDecode(response.body);
+      return json;
+    } else {
+      return null;
+    }
+  }
+}

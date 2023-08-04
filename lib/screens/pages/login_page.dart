@@ -133,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Container(
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: Colors.deepPurple,
+                        color: Color(0xFFEF6262),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -179,7 +179,6 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    
                   ],
                 ),
               ],
@@ -198,8 +197,6 @@ class _LoginPageState extends State<LoginPage> {
     return emailController.text.isNotEmpty &&
         passwordController.text.isNotEmpty;
   }
-
-  
 
   Future<void> loginUser() async {
     // print(body);
